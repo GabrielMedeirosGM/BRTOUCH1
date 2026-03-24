@@ -66,6 +66,12 @@ const PRODUCTS: Record<string, {
   },
 };
 
+export async function generateStaticParams() {
+  return Object.keys(PRODUCTS).map((id) => ({
+    id: id,
+  }));
+}
+
 export default async function ProdutoPage({ params }: Props) {
   const { id } = await params;
   const product = PRODUCTS[id] ?? PRODUCTS['totem-classic-v4'];
