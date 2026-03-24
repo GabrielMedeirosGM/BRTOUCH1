@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#fcb97a",
+              "surface-container-low": "#f3f3f3",
+              "on-tertiary-fixed-variant": "#693c06",
+              "secondary-fixed": "#e5e2e1",
+              "primary-fixed": "#96f2ee",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-primary-fixed": "#00201f",
+              "on-secondary-container": "#636262",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#bdc9c7",
+              "on-primary-fixed-variant": "#00504e",
+              "primary-container": "#7cd8d4",
+              "secondary": "#5f5e5e",
+              "primary": "#006a67",
+              "error": "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#6e7978",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdcc0",
+              "on-surface-variant": "#3e4948",
+              "on-primary-container": "#005e5c",
+              "surface-dim": "#dadada",
+              "surface-tint": "#006a67",
+              "inverse-surface": "#2f3131",
+              "on-background": "#1a1c1c",
+              "on-secondary-fixed-variant": "#474746",
+              "on-tertiary-container": "#794914",
+              "surface-bright": "#f9f9f9",
+              "background": "#f9f9f9",
+              "surface-variant": "#e2e2e2",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-container-high": "#e8e8e8",
+              "tertiary": "#85531d",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "surface": "#f9f9f9",
+              "surface-container-highest": "#e2e2e2",
+              "tertiary-container": "#ffbb7c",
+              "inverse-primary": "#7ad6d2",
+              "on-secondary-fixed": "#1b1c1c",
+              "secondary-container": "#e2dfde",
+              "on-tertiary-fixed": "#2d1600",
+              "primary-fixed-dim": "#7ad6d2"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<img alt="BR Touch Logo" class="w-12 h-12 object-contain" data-alt="BR Touch minimalist cyan corporate logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-oBYa4X9_9SDyFnipblNgPTTfNnXG69MccOHRd4DedEqIIaBwGnNxqZPIJgebu6bkpjzDXMQFDNyDWzDjY76u5WI2uBxWkdJOUrXfbZwPmxEnvCsuSyKmDAGdgIMYhoFm7LDkV70ZwcbWQII_t0UDMO5u5h4euL9ivNOdDNj3K4Geod7EUWKSwFxJsOM7ofXS-fPLiMzGDldgl0OuWzU4VwgDh3dbXk-7wTqIZWrPCx3Koq-gDJmxEu_pOi-HlwFMAcguneJHs7o"/>
+<div class="hidden md:flex gap-6">
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-teal-500 border-b-2 border-teal-400 pb-1" href="#">Impressoras</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Monitores</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Totens</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Suporte</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-zinc-600 scale-95 active:scale-90 transition-transform">shopping_cart</button>
+<button class="material-symbols-outlined text-zinc-600 scale-95 active:scale-90 transition-transform">person</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-surface py-20 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<span class="font-label text-sm uppercase tracking-widest text-primary font-bold mb-4 block">Precisão &amp; Eficiência</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold leading-tight tracking-tighter text-on-background mb-8">
+                        Inovação em <br/><span class="text-primary-container">Autoatendimento</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-lg mb-10 leading-relaxed">
+                        Projetamos tecnologia de ponta para otimizar a experiência do usuário. Soluções robustas de hardware com design minimalista.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-bold text-sm uppercase tracking-widest rounded-lg hover:brightness-95 transition-all">
+                            Ver Catálogo
+                        </button>
+<button class="border border-outline-variant text-on-background px-8 py-4 font-bold text-sm uppercase tracking-widest rounded-lg hover:bg-surface-container-low transition-all">
+                            Falar com Consultor
+                        </button>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="absolute inset-0 bg-primary-container/10 -rotate-3 rounded-xl"></div>
+<img alt="Kiosk Totem" class="relative z-10 w-full h-auto object-cover rounded-xl shadow-2xl" data-alt="High-fidelity interactive digital kiosk totem display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtT6fban4dWXbZtJbZKQoeG_R_syn9UrKr1woAMPEVY4eYjNTOYC0ng8G4GoNa6q2KIgIPYxfdWDo3Hm_9IFoM44x3Z1-tjbgLenlHdXFM-tLylqVmajx75es9gBoRmdj6w8OzTxcWJZ_WY6rb_LQ7ZI7IehMSz8XF59P77b_4ms_BUj0ZAs8vknc1_fphKNWWkBgZGquiwkNRxrB-YuaGmORXgMORW12SP4PlXLClb8C0s0xzkR6r3Q-NwQqhIPtDrf7w8m7zHIU"/>
+</div>
+</div>
+</section>
+<!-- Signature Metrics -->
+<section class="bg-surface-container-low py-12 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-bold text-on-background">150+</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">Cidades Atendidas</span>
+<div class="h-1 w-12 bg-primary-container mt-2"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-bold text-on-background">99.9%</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">Uptime de Hardware</span>
+<div class="h-1 w-12 bg-primary-container mt-2"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-bold text-on-background">24/7</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">Suporte Técnico</span>
+<div class="h-1 w-12 bg-primary-container mt-2"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-bold text-on-background">10k+</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mt-1">Terminais Ativos</span>
+<div class="h-1 w-12 bg-primary-container mt-2"></div>
+</div>
+</div>
+</section>
+<!-- Promotional Sections - Bento Grid Style -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Promo Week -->
+<div class="md:col-span-2 bg-primary-container p-12 flex flex-col justify-between min-h-[400px]">
+<div>
+<span class="font-label text-sm font-bold uppercase tracking-tighter text-on-primary-container">Oferta Limitada</span>
+<h2 class="font-headline text-4xl font-bold text-on-primary-container mt-4 mb-6">Promoção da Semana</h2>
+<p class="text-on-primary-container/80 text-lg max-w-md">Upgrade de memória e SSD incluso em toda a linha de Totens Slim.</p>
+</div>
+<button class="bg-on-primary-container text-surface-container-lowest w-fit px-8 py-3 font-bold text-xs uppercase tracking-widest">
+                        Aproveitar Agora
+                    </button>
+</div>
+<!-- Promo Month -->
+<div class="bg-secondary p-12 flex flex-col justify-between">
+<div>
+<span class="font-label text-sm font-bold uppercase tracking-tighter text-surface-container-low">Destaque Mensal</span>
+<h2 class="font-headline text-4xl font-bold text-surface-container-lowest mt-4 mb-6">Promoção do Mês</h2>
+<p class="text-surface-container-low/70 text-base">Monitores Touch 24" com 20% de desconto para compras em lote.</p>
+</div>
+<button class="border border-surface-container-low text-surface-container-lowest w-fit px-8 py-3 font-bold text-xs uppercase tracking-widest hover:bg-surface-container-lowest hover:text-secondary transition-colors">
+                        Ver Detalhes
+                    </button>
+</div>
+</div>
+</section>
+<!-- Product Cards -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label text-xs uppercase tracking-widest text-primary font-bold">Nossas Soluções</span>
+<h2 class="font-headline text-4xl font-bold mt-2">Equipamentos de Alta Precisão</h2>
+</div>
+<a class="text-primary font-bold text-sm uppercase border-b-2 border-primary-container pb-1" href="#">Ver Tudo</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="group bg-surface-container-lowest hover:bg-white transition-all p-4">
+<div class="aspect-square bg-surface-container-high mb-6 flex items-center justify-center p-8 overflow-hidden">
+<img alt="Monitor" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="High-end professional touchscreen monitor display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHytGn_Ctp6IPOIFAhn94JHuTSv01LA8qvbJwyRj9pV8BGot0lGESHc8e6RmItjnSyzKaBlcTbdx7gLNG_lmuBIeBpN48Y8_Y_H1nhcakuZwFt-scQ3ypsAY6LLFZau8th28AxwoD7hpOLOepcKI9grP80qi2gDVWV_f2mySp3THXh2h_MpYgDEGGNHk4GHf813uqe0NwXXS1GznFM7G9JU_cvO9iiiu4voJhdL-55eGQuZB1r5MIu90tUO7e7S2J9_ANHIDVq_uU"/>
+</div>
+<div class="px-4 pb-4">
+<span class="font-label text-[10px] uppercase font-bold text-zinc-400">Display</span>
+<h3 class="font-headline text-xl font-bold text-on-surface mt-1">Monitor Touch Pro 27"</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">Painel IPS 4K com sensibilidade capacitiva de 10 pontos.</p>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-xl font-bold text-on-surface">R$ 2.490</span>
+<button class="material-symbols-outlined bg-zinc-900 text-white p-2 rounded-full">add_shopping_cart</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface-container-lowest hover:bg-white transition-all p-4">
+<div class="aspect-square bg-surface-container-high mb-6 flex items-center justify-center p-8 overflow-hidden">
+<img alt="Impressora" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Compact industrial thermal receipt printer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnVANz1ubqRkfAKWirme6f2B4GDarDeIPe_GDPmuFZIePe94pqiLhGXI0D61TfvRIB-eb9cY76Ch3jwobukYG2d0CujR865-4O2PJkKlZ-o1Ikx9CElmrIfBlkJ0elW38jntRvpSv35j4Nj_oT-nSQdhvGFsHpDWksHf2j4tfchijgnUB_FMnD-RSDvRoPorRhX_6UJxyLSJ9baIx8jf4e4osvfpJRFA8sah7CFJPKkWnPg4qO_hHHJut4FeswFjhJwbsSdSUORd8"/>
+</div>
+<div class="px-4 pb-4">
+<span class="font-label text-[10px] uppercase font-bold text-zinc-400">Hardware</span>
+<h3 class="font-headline text-xl font-bold text-on-surface mt-1">Impressora Térmica XT</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">Velocidade de 300mm/s com guilhotina reforçada de tungstênio.</p>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-xl font-bold text-on-surface">R$ 890</span>
+<button class="material-symbols-outlined bg-zinc-900 text-white p-2 rounded-full">add_shopping_cart</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface-container-lowest hover:bg-white transition-all p-4">
+<div class="aspect-square bg-surface-container-high mb-6 flex items-center justify-center p-8 overflow-hidden">
+<img alt="Totem" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Interactive outdoor digital signage totem" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEygrQdfVcGQrP3wh5_TST0HmxkfJ2M2jkbSyqIrwTrMZsEAzw2evppjepNCqv_-NBt61dfA8RHDJB07ohGpv-ck-Cw89i_qhp7nfh0HPlW0g-z4hq64r0vi4qrNL3t72pEdSgVZpasZgYLrEwo71ZOMqDrf4SQcDKEpvfOuihmUlhW2D-mYcCL2N6BWeJOthAeCPwbL0lXJ3fMsVC1cDKEkmeT3tpDAJay5J6ycSFHEFEZmQnvsDrnmSGaGH0vYO46ctVcaV93C4"/>
+</div>
+<div class="px-4 pb-4">
+<span class="font-label text-[10px] uppercase font-bold text-zinc-400">Terminal</span>
+<h3 class="font-headline text-xl font-bold text-on-surface mt-1">Totem Classic v4</h3>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">Estrutura em aço carbono com pintura eletrostática e LED frontal.</p>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-xl font-bold text-on-surface">R$ 5.120</span>
+<button class="material-symbols-outlined bg-zinc-900 text-white p-2 rounded-full">add_shopping_cart</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Excellence Split -->
+<section class="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<img alt="Technical Design" class="w-full grayscale brightness-90 contrast-125" data-alt="Close-up of technical engineering circuit board details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1du87sYTXGxXZi_01HCMraDi9j0vnDuJ8fCrOeCjDQQqLnphy0yyGxd2z66JDprmkl1GJjLdm0elN3rzA6jLkS27AEk8HLE9x19Y4T-6yRoi6EUxPQcPV8hm-VX_IE1XU3OMs07C9bNnI8aNWN2cPe8JzoLoVDLa8enT5gcVRCr9mLxxHNjNN0e4vq9ICDYUVRq5hkpb2wWivopL2jXs1_Cp4TYZzAhESStZWZUfQm19j6zUyokSXMjEVcVTfjlwZPlf2vwf2FUA"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8 leading-tight">Engenharia de <br/>Fidelidade Extrema</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">precision_manufacturing</span>
+<div>
+<h4 class="font-headline font-bold text-lg">Corte a Laser CNC</h4>
+<p class="text-on-surface-variant">Acabamento impecável em cada milímetro da estrutura metálica.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">verified_user</span>
+<div>
+<h4 class="font-headline font-bold text-lg">Certificação Industrial</h4>
+<p class="text-on-surface-variant">Componentes testados para operação contínua em ambientes hostis.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">bolt</span>
+<div>
+<h4 class="font-headline font-bold text-lg">Baixo Consumo</h4>
+<p class="text-on-surface-variant">Eletrônica otimizada para eficiência energética sustentável.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-100 border-t border-zinc-200">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<h3 class="font-headline text-2xl font-bold tracking-tight text-on-background">BR TOUCH</h3>
+<p class="text-zinc-500 max-w-sm text-sm">Líder em soluções de hardware para autoatendimento e interatividade digital. Precision Engineered.</p>
+<div class="flex gap-4">
+<a class="text-zinc-400 hover:text-teal-400 transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-zinc-400 hover:text-teal-400 transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-zinc-400 hover:text-teal-400 transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-label text-xs tracking-widest uppercase font-bold text-zinc-900">Empresa</span>
+<a class="font-body text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Sobre Nós</a>
+<a class="font-body text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">FAQ</a>
+<a class="font-body text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Newsletter</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-xs tracking-widest uppercase font-bold text-zinc-900">Legal</span>
+<a class="font-body text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Privacidade</a>
+<a class="font-body text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Termos de Uso</a>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-zinc-200 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+<p class="font-body text-xs tracking-widest uppercase text-zinc-500">© 2024 BR Touch. Precision Engineered.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<img alt="Visa" class="h-6 grayscale opacity-50" data-alt="Visa payment icon gray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxvjBW4if5DnsO1jhQR0f5magNPdFxhy1TCAN8arVdW2BENj8-ugpGh5kJkBw1NX9gSkTtVToDhETYjqIZgSAn-wh4YnpYt0wUCGj-zEs7PTboB1ttu_0HAvf5LqoDs_fatsPF7abKlAqJV1F2HL1SafnssHWK5ESp8O5YsiKPtRC29ygQ20Bgx23I4Y8CJ4TvTRsAiXt30pH_8ILfaMD7XZF1dQ8LFJZYD8yZ_K7Hw_bUdQweBlx5T3cA32_vYlpy1sZOFpw63wU"/>
+<img alt="Mastercard" class="h-6 grayscale opacity-50" data-alt="Mastercard payment icon gray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjfjNyMtkXpp1QB8S8mxS4KtHKj5waM1gfyIuNmvIF4eXQtl_DKVFFhcLv8urvpKxI1ckMge9WEtC5iRDRUbY_NvxXQhjrE20BgI57YWgtOMeT9VmvRr_mAz07BeAuh68z5xyNzws9Lb5en2DbpQVaNf5TWin7phmYmJxZ9aJ94eT7nTDDMiOfllSJKOYqWjgdWZls-XZRwFq1utRxc46bV3-bKrKmkt8WchwoUFW1XPC6_QGpYGuNE1Q3VboXgI5mXo9bFL0G31E"/>
+<img alt="Elo" class="h-6 grayscale opacity-50" data-alt="Elo payment icon gray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4E2BzBj7TTV-eCN3lu8RpBesDeX2OXeu_QFZ3vDt29ZCPF9wgin4cHQstqwqvpgaLs3HZzSymSo4MYcyxWbYOWfogZzBNGT0IPVtTwZmb435CBdNVCjSkEHK6mW0l7YzbsMW2OPXYBBwFa1CooxvoGtL5stQj2G5tAuExUf2WnTdVpZ8FGl1uUMGFO_G4Olb9wXvsUQ6kwxaiiZhjj7tZ0JA-OH4umUDpOl22M1mjd4gGHwzN8BsU2z-veyWwCHGr0tNuR1M1Dbk"/>
+</div>
+</div>
+</footer>
+</body></html>

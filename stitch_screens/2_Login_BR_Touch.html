@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | BR Touch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#fcb97a",
+              "surface-container-low": "#f3f3f3",
+              "on-tertiary-fixed-variant": "#693c06",
+              "secondary-fixed": "#e5e2e1",
+              "primary-fixed": "#96f2ee",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-primary-fixed": "#00201f",
+              "on-secondary-container": "#636262",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#bdc9c7",
+              "on-primary-fixed-variant": "#00504e",
+              "primary-container": "#7cd8d4",
+              "secondary": "#5f5e5e",
+              "primary": "#006a67",
+              "error": "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#6e7978",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdcc0",
+              "on-surface-variant": "#3e4948",
+              "on-primary-container": "#005e5c",
+              "surface-dim": "#dadada",
+              "surface-tint": "#006a67",
+              "inverse-surface": "#2f3131",
+              "on-background": "#1a1c1c",
+              "on-secondary-fixed-variant": "#474746",
+              "on-tertiary-container": "#794914",
+              "surface-bright": "#f9f9f9",
+              "background": "#f9f9f9",
+              "surface-variant": "#e2e2e2",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-container-high": "#e8e8e8",
+              "tertiary": "#85531d",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "surface": "#f9f9f9",
+              "surface-container-highest": "#e2e2e2",
+              "tertiary-container": "#ffbb7c",
+              "inverse-primary": "#7ad6d2",
+              "on-secondary-fixed": "#1b1c1c",
+              "secondary-container": "#e2dfde",
+              "on-tertiary-fixed": "#2d1600",
+              "primary-fixed-dim": "#7ad6d2"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+            font-size: 20px;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<main class="flex-grow flex items-center justify-center px-6 py-12">
+<div class="w-full max-w-md">
+<div class="flex justify-center mb-10">
+<img alt="BR Touch Logo" class="w-20 h-20 object-contain" data-alt="BR Touch clinical teal and grey minimalist logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJiJ3qun5trnTwYw2W5D_mG6Ffox4PbzCnwWBBy_dqC7ekFxXJQMJhmNhF19nL5XHbTzmWQmpoxfprX4QeiBq6WPKX3AaKgAewBO8BHGA4HReUk97Z6RQS6ZVK1LzDEXuMDsBg3e0ckFEs_GvXDKeSLOrS-cXIcLRQMOsrs0dCoq3eIuE6d2_ks_4iupum9o_UhNsbwsT-zBf_JR7GNmDQt1WiMdH6QR92RXKL1yb1TGr9X90PlKJNEsG8bJyHIjmIl0k8mK7hLnE"/>
+</div>
+<div class="bg-surface-container-lowest p-8 md:p-12 shadow-sm border-0">
+<div class="mb-10 text-center">
+<h1 class="text-3xl font-bold tracking-tight text-on-surface mb-2">Acesso ao Sistema</h1>
+<p class="text-on-surface-variant text-sm font-body">Entre com suas credenciais para continuar.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-1.5">
+<label class="block text-[0.6875rem] font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="identity">Email/CPF</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<input class="block w-full pl-10 pr-4 py-3 bg-surface-container-highest border-0 border-b-2 border-transparent focus:ring-0 focus:border-primary transition-all text-sm rounded-sm" id="identity" name="identity" placeholder="usuario@exemplo.com" type="text"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="block text-[0.6875rem] font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="password">Senha</label>
+<a class="text-[0.6875rem] font-bold uppercase tracking-widest text-primary hover:text-on-primary-container transition-colors" href="#">Esqueci minha senha</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<input class="block w-full pl-10 pr-10 py-3 bg-surface-container-highest border-0 border-b-2 border-transparent focus:ring-0 focus:border-primary transition-all text-sm rounded-sm" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface-variant" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary-container text-on-primary-container font-headline font-bold py-4 px-6 rounded-md hover:brightness-95 active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+                            Entrar e Continuar
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<div class="mt-12 flex flex-col items-center gap-4">
+<div class="w-full flex items-center gap-4">
+<div class="flex-grow h-px bg-surface-container-high"></div>
+<span class="text-[0.625rem] font-bold uppercase tracking-[0.2em] text-outline">Novo por aqui?</span>
+<div class="flex-grow h-px bg-surface-container-high"></div>
+</div>
+<a class="text-sm font-bold text-secondary hover:text-on-background transition-colors flex items-center gap-2" href="#">
+                        Criar Conta
+                        <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="mt-12 text-center space-y-4">
+<div class="h-1 w-12 bg-primary-container mx-auto"></div>
+<p class="text-[0.6875rem] font-body font-medium uppercase tracking-widest text-outline">
+                    Precision Engineered by BR Touch
+                </p>
+</div>
+</div>
+</main>
+<footer class="w-full mt-auto bg-zinc-100 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-10 w-full">
+<div class="flex flex-col justify-center">
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-500">
+                    © 2024 BR Touch. Precision Engineered.
+                </p>
+</div>
+<div class="flex flex-wrap md:justify-end gap-6 items-center">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-500 hover:text-teal-400 dark:hover:text-teal-300 transition-colors opacity-80 hover:opacity-100" href="#">Sobre Nós</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-500 hover:text-teal-400 dark:hover:text-teal-300 transition-colors opacity-80 hover:opacity-100" href="#">Políticas de Privacidade</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-500 hover:text-teal-400 dark:hover:text-teal-300 transition-colors opacity-80 hover:opacity-100" href="#">Termos de Uso</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-500 hover:text-teal-400 dark:hover:text-teal-300 transition-colors opacity-80 hover:opacity-100" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+</body></html>

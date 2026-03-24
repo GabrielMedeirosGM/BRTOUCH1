@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BR Touch | Dashboard de Gestão de Estoque</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#fcb97a",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary-fixed-variant": "#693c06",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#96f2ee",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed": "#00201f",
+                        "on-secondary-container": "#636262",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#bdc9c7",
+                        "on-primary-fixed-variant": "#00504e",
+                        "primary-container": "#7cd8d4",
+                        "secondary": "#5f5e5e",
+                        "primary": "#006a67",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#6e7978",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdcc0",
+                        "on-surface-variant": "#3e4948",
+                        "on-primary-container": "#005e5c",
+                        "surface-dim": "#dadada",
+                        "surface-tint": "#006a67",
+                        "inverse-surface": "#2f3131",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-container": "#794914",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#85531d",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "surface": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-container": "#ffbb7c",
+                        "inverse-primary": "#7ad6d2",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary-container": "#e2dfde",
+                        "on-tertiary-fixed": "#2d1600",
+                        "primary-fixed-dim": "#7ad6d2"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-sm px-8 py-4 flex justify-between items-center">
+<div class="flex items-center gap-8">
+<img alt="BR Touch Logo" class="w-12 h-12 object-contain" data-alt="BR Touch minimalist corporate logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLlML9BsVHqCeJ0wQUpEiXtdkJxfVq2dX75nnU9D7LeeMGFzkVCx5AfN_KuFWcL7qLeEx1LJ9HtppOpktmWPV_g0dkPi2wNjuDCDBIo4Ilfbxk0t-Pd5NhO0qPTMITR4bkol0bZ9oI64R38RLWqH-ZNasrhBMhbJlbdNr_wGKoSQ2igbvwP1T9eRsyMEfOIRHKxJqzplrLIEVz1SC6-xfYpRz9lH7AyaubGdYHxLeLKZNrGk0u247DctNY5yyJImG272VB20nd1ZE"/>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Impressoras</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Monitores</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Totens</a>
+<a class="font-headline tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Suporte</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<div class="flex pt-20 min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 fixed left-0 h-[calc(100vh-5rem)] bg-surface border-r border-outline-variant/15 flex flex-col p-6 hidden md:flex">
+<div class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold shadow-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-body text-sm">Estoque</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body font-medium text-sm">Relatórios</span>
+</a>
+</div>
+<div class="mt-auto pt-8 border-t border-outline-variant/15">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Status do Sistema</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-medium">Sincronizado</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 p-8">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Page Header & Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl font-bold tracking-tight mb-2">Gestão de Estoque</h1>
+<p class="text-on-surface-variant font-body">Visualize e gerencie o inventário técnico da BR Touch.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2 hover:opacity-95 transition-all active:scale-95">
+<span class="material-symbols-outlined text-sm">file_download</span>
+                            Exportar CSV
+                        </button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2 hover:opacity-95 transition-all active:scale-95 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-sm">add</span>
+                            + Novo Item
+                        </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Cadastro de Produto Form -->
+<section class="lg:col-span-4 bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="w-1.5 h-6 bg-primary-container inline-block"></span>
+                            Cadastro de Produto
+                        </h2>
+<form class="space-y-5">
+<div>
+<label class="block font-label text-[10px] uppercase tracking-wider text-on-surface-variant mb-1.5">Nome</label>
+<input class="w-full bg-surface-container-highest border-none rounded-sm px-4 py-2.5 text-sm focus:ring-0 focus:border-b-2 focus:border-primary transition-all" placeholder="Ex: Monitor Touch 21.5" type="text"/>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase tracking-wider text-on-surface-variant mb-1.5">Categoria</label>
+<select class="w-full bg-surface-container-highest border-none rounded-sm px-4 py-2.5 text-sm focus:ring-0 focus:border-b-2 focus:border-primary transition-all appearance-none">
+<option>Impressoras</option>
+<option>Monitores</option>
+<option>Totens</option>
+<option>Periféricos</option>
+</select>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<label class="col-span-3 block font-label text-[10px] uppercase tracking-wider text-on-surface-variant mb-0.5">Estado</label>
+<button class="py-2 text-xs font-medium rounded-sm bg-primary-container text-on-primary-container" type="button">Novo</button>
+<button class="py-2 text-xs font-medium rounded-sm bg-surface-container-high text-on-surface-variant" type="button">Usado</button>
+<button class="py-2 text-xs font-medium rounded-sm bg-surface-container-high text-on-surface-variant" type="button">Quebrado</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label text-[10px] uppercase tracking-wider text-on-surface-variant mb-1.5">Preço Compra</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-xs text-on-surface-variant">R$</span>
+<input class="w-full bg-surface-container-highest border-none rounded-sm pl-9 pr-4 py-2.5 text-sm focus:ring-0 focus:border-b-2 focus:border-primary transition-all" step="0.01" type="number"/>
+</div>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase tracking-wider text-on-surface-variant mb-1.5">Preço Venda</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-xs text-on-surface-variant">R$</span>
+<input class="w-full bg-surface-container-highest border-none rounded-sm pl-9 pr-4 py-2.5 text-sm focus:ring-0 focus:border-b-2 focus:border-primary transition-all" step="0.01" type="number"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase tracking-wider text-on-surface-variant mb-1.5">Quantidade</label>
+<input class="w-full bg-surface-container-highest border-none rounded-sm px-4 py-2.5 text-sm focus:ring-0 focus:border-b-2 focus:border-primary transition-all" placeholder="0" type="number"/>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary py-3 rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-primary/90 transition-all active:scale-95" type="submit">Salvar Item</button>
+</form>
+</section>
+<!-- Data Table Section -->
+<section class="lg:col-span-8 space-y-6">
+<!-- Key Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-primary-container">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Total em Estoque</p>
+<h3 class="text-3xl font-bold font-headline">1.284 <span class="text-xs font-normal text-on-surface-variant">itens</span></h3>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-primary">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Valor de Mercado</p>
+<h3 class="text-3xl font-bold font-headline">R$ 142.080,00</h3>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-secondary">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Itens para Reparo</p>
+<h3 class="text-3xl font-bold font-headline">12 <span class="text-xs font-normal text-on-surface-variant">unid.</span></h3>
+</div>
+</div>
+<!-- Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-wider text-on-surface-variant">Produto</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-wider text-on-surface-variant">Estado</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-wider text-on-surface-variant">Preço Venda</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-wider text-on-surface-variant">Qtd.</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-wider text-on-surface-variant">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="font-medium text-sm text-on-surface">Impressora Térmica XT-400</span>
+<span class="text-[10px] text-on-surface-variant uppercase">Hardware / Impressoras</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase bg-primary-container/20 text-on-primary-container">Novo</span>
+</td>
+<td class="px-6 py-4 font-headline text-sm font-medium">R$ 1.450,00</td>
+<td class="px-6 py-4 font-headline text-sm">42</td>
+<td class="px-6 py-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="font-medium text-sm text-on-surface">Monitor Touch LED 15"</span>
+<span class="text-[10px] text-on-surface-variant uppercase">Display / Monitores</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase bg-secondary-container text-on-secondary-container">Usado</span>
+</td>
+<td class="px-6 py-4 font-headline text-sm font-medium">R$ 890,00</td>
+<td class="px-6 py-4 font-headline text-sm">18</td>
+<td class="px-6 py-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="font-medium text-sm text-on-surface">Totem Slim Full HD</span>
+<span class="text-[10px] text-on-surface-variant uppercase">Autoatendimento / Totens</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase bg-error-container text-on-error-container">Quebrado</span>
+</td>
+<td class="px-6 py-4 font-headline text-sm font-medium">R$ 4.200,00</td>
+<td class="px-6 py-4 font-headline text-sm">3</td>
+<td class="px-6 py-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="font-medium text-sm text-on-surface">Leitor de QR Code 2D</span>
+<span class="text-[10px] text-on-surface-variant uppercase">Scanners / Periféricos</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase bg-primary-container/20 text-on-primary-container">Novo</span>
+</td>
+<td class="px-6 py-4 font-headline text-sm font-medium">R$ 320,00</td>
+<td class="px-6 py-4 font-headline text-sm">114</td>
+<td class="px-6 py-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 bg-surface-container-low/30 flex items-center justify-between border-t border-surface-container">
+<span class="text-xs text-on-surface-variant font-body">Exibindo 4 de 1.284 itens</span>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs border border-outline-variant/30 rounded-sm hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">Anterior</button>
+<button class="px-3 py-1 text-xs border border-outline-variant/30 rounded-sm hover:bg-surface-container transition-colors">Próximo</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-zinc-100 border-t border-zinc-200 py-16 px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="font-headline font-bold text-teal-400 mb-4">BR TOUCH</p>
+<p class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500">© 2024 BR Touch. Precision Engineered.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 justify-end items-center">
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Sobre Nós</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Políticas de Privacidade</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Termos de Uso</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">FAQ</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Newsletter</a>
+</div>
+</footer>
+<!-- Mobile Navigation (Bottom Bar) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md flex justify-around items-center px-4 py-3 border-t border-zinc-100 z-50">
+<a class="flex flex-col items-center gap-1 text-zinc-400" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] uppercase font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-teal-500" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="text-[10px] uppercase font-bold">Estoque</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] uppercase font-bold">Relatórios</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] uppercase font-bold">Config</span>
+</a>
+</nav>
+</body></html>

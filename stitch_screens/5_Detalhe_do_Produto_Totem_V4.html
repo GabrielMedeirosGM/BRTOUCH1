@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7CD8D4",
+              "primary-hover": "#6AC9C5",
+            },
+            fontFamily: {
+              "headline": ["Public Sans", "sans-serif"],
+              "body": ["Public Sans", "sans-serif"],
+              "label": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 font-body antialiased">
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-sm flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<img alt="BR Touch Logo" class="w-12 h-12 object-contain" data-alt="BR Touch Professional Tech Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgCusuMzqDA9Fsg1OiUikR6aRIVWmlENCTBTFZIEyO2JpxWZowOHgoeNbN3YO0dgGveOkDUfsM7uqIVsZXxwFMnKk-uhC7608Bw46MGo1M-98_JNqYHB1sqwKKnmHndeSoF110gcVusY2JBwL_FXF8Dv-C6gxp6GYwE-tY-SwMJT6c_Yml6G0LBTxs9JVGXcYD3aJf6FEtmj_gGEnNzeJzZpPvw30c9jOPbLsWSYI5VnqsIYDMH-B2y2mMSN7CJa74P2fCU8_gSpA"/>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Impressoras</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Monitores</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase font-bold text-teal-500 border-b-2 border-teal-400 pb-1" href="#">Totens</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase font-bold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Suporte</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-zinc-600 hover:bg-zinc-50 rounded-full transition-all duration-200 scale-95 active:scale-90">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 text-zinc-600 hover:bg-zinc-50 rounded-full transition-all duration-200 scale-95 active:scale-90">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-7 space-y-6">
+<div class="bg-zinc-50 rounded-xl overflow-hidden aspect-square flex items-center justify-center p-8 border border-zinc-100">
+<img alt="Totem BR Touch" class="w-full h-full object-contain" data-alt="Minimalist Professional Interactive Digital Totem Display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxHdFXnJu-yXh0yqE78dP7oNjqNBA1RMOJuXv0wGVVWU4Y13gJ2OqFRFm2Ia51fdgfl-gCk3mCZUWt0m8waIC2Bx--L0KKiSNncOkBMVvS1TNgKrZiO82zQ_4Sosi2skias5-BrOQ10--OmTNWVzUb4VbxpdJz2TwPuZZwylfT8fPJyOPt4jZPoNiPDjqS7WcgIUkMC-BEGurWCz4937aq0XTKdQY1zqQXh4NbmZRlv2nZNyxHtrZEcLVttm1N8GuYvzFCkchhnDo"/>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-zinc-50 rounded-lg border border-teal-400 p-2 cursor-pointer">
+<img alt="Thumbnail 1" class="w-full h-full object-contain opacity-100" data-alt="Close up of totem screen detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArCb4CKaowXYC40GPHM_ruaX_N4RxGqyQX88r95aVxGYpWuaVtp4zS3IvXWPijVwMr2Y5SZPstF5oe1_DmxFC7Sjr7-GP21jGNRDGoYDCeZSzXwjlDGo31YXMu5gixf_hM8YViwJxr_trdFG9dIrGBKIzowGf0PlFBrx066XvLfUbqXfxbLQBcgltukdKH30cQwnd_wD1wrazbQYvUr8QDxA80o0obFXFX_L4nokcxlXwj0vQps4QAuiqtUS0Agt4-3-0b74hd1tc"/>
+</div>
+<div class="aspect-square bg-zinc-50 rounded-lg border border-zinc-100 p-2 cursor-pointer hover:border-zinc-300">
+<div class="w-full h-full bg-zinc-200 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-zinc-400">image</span>
+</div>
+</div>
+<div class="aspect-square bg-zinc-50 rounded-lg border border-zinc-100 p-2 cursor-pointer hover:border-zinc-300">
+<div class="w-full h-full bg-zinc-200 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-zinc-400">image</span>
+</div>
+</div>
+<div class="aspect-square bg-zinc-50 rounded-lg border border-zinc-100 p-2 cursor-pointer hover:border-zinc-300">
+<div class="w-full h-full bg-zinc-200 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-zinc-400">image</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-8">
+<header>
+<div class="inline-block px-3 py-1 bg-zinc-100 text-zinc-600 text-[10px] font-bold uppercase tracking-widest rounded mb-4">
+                        Série Profissional
+                    </div>
+<h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 mb-2">Totem Interativo BR Touch</h1>
+<p class="text-zinc-500 leading-relaxed">Alta performance e durabilidade para ambientes de alto tráfego. Design minimalista que se integra a qualquer projeto arquitetônico.</p>
+</header>
+<div class="space-y-4">
+<div class="p-6 rounded-xl border border-zinc-100 bg-white shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-medium text-zinc-500 uppercase tracking-wider">Configuração Full</span>
+<span class="text-zinc-400 text-xs">Unidade</span>
+</div>
+<div class="text-2xl font-bold text-zinc-900">R$ 5.400,00</div>
+<p class="text-xs text-zinc-400 mt-1">Preço por Unidade (Com Periféricos)</p>
+</div>
+<div class="p-6 rounded-xl border-2 border-teal-100 bg-teal-50/30 relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-teal-400 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-tighter">Oferta de Lote</div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold text-teal-600 uppercase tracking-wider">Opção Apenas CPU</span>
+<span class="text-teal-600/60 text-xs font-bold">Lote</span>
+</div>
+<div class="text-3xl font-black text-zinc-900">R$ 3.800,00</div>
+<p class="text-xs text-zinc-500 mt-1">Preço por Lote (Apenas CPU)</p>
+<div class="mt-4 pt-4 border-t border-teal-100 flex items-center gap-2 text-teal-700">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">trending_down</span>
+<span class="font-bold text-sm tracking-tight">Economia de R$ 1.600,00 por unidade</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full py-5 bg-[#7CD8D4] hover:bg-[#6AC9C5] text-white font-bold rounded-lg shadow-lg shadow-teal-200/50 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">shopping_cart</span>
+                        ADICIONAR AO CARRINHO
+                    </button>
+<p class="text-center text-xs text-zinc-400 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                        É necessário fazer login para finalizar a compra.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="flex items-center gap-3 p-3 bg-zinc-50 rounded-lg">
+<span class="material-symbols-outlined text-teal-500">local_shipping</span>
+<div class="text-[11px] font-bold text-zinc-600 uppercase">Envio em 48h</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-zinc-50 rounded-lg">
+<span class="material-symbols-outlined text-teal-500">verified</span>
+<div class="text-[11px] font-bold text-zinc-600 uppercase">2 Anos Garantia</div>
+</div>
+</div>
+</div>
+</div>
+<section class="mt-24">
+<h2 class="text-2xl font-bold tracking-tight mb-8 flex items-center gap-3">
+<span class="w-8 h-1 bg-teal-400"></span>
+                Especificações Técnicas
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="overflow-hidden border border-zinc-100 rounded-xl">
+<table class="w-full text-left text-sm">
+<thead class="bg-zinc-50 border-b border-zinc-100">
+<tr>
+<th class="px-6 py-4 font-bold text-zinc-400 uppercase tracking-widest text-[10px]">Componente</th>
+<th class="px-6 py-4 font-bold text-zinc-400 uppercase tracking-widest text-[10px]">Detalhes</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-zinc-100">
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Tela</td>
+<td class="px-6 py-4 text-zinc-500">21.5" Full HD Capacitiva (10 toques)</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Processador</td>
+<td class="px-6 py-4 text-zinc-500">Intel Core i5 - 11ª Geração</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Memória RAM</td>
+<td class="px-6 py-4 text-zinc-500">8GB DDR4 (Expansível até 32GB)</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Armazenamento</td>
+<td class="px-6 py-4 text-zinc-500">SSD 240GB NVMe M.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="overflow-hidden border border-zinc-100 rounded-xl">
+<table class="w-full text-left text-sm">
+<thead class="bg-zinc-50 border-b border-zinc-100">
+<tr>
+<th class="px-6 py-4 font-bold text-zinc-400 uppercase tracking-widest text-[10px]">Estrutura</th>
+<th class="px-6 py-4 font-bold text-zinc-400 uppercase tracking-widest text-[10px]">Detalhes</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-zinc-100">
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Material</td>
+<td class="px-6 py-4 text-zinc-500">Aço Carbono com Pintura Eletrostática</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Conectividade</td>
+<td class="px-6 py-4 text-zinc-500">Wi-Fi Dual Band, Bluetooth 5.0, LAN RJ45</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Sistema Operacional</td>
+<td class="px-6 py-4 text-zinc-500">Windows 11 Pro / Linux Compatível</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-zinc-600">Dimensões</td>
+<td class="px-6 py-4 text-zinc-500">1450mm x 480mm x 320mm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full mt-auto bg-zinc-100 border-t border-zinc-200">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-teal-400 text-xl font-bold tracking-tight">BR TOUCH</div>
+<p class="text-zinc-500 text-sm max-w-md">Especialistas em tecnologia touch de alta performance. Desenvolvendo soluções para o futuro da interatividade no varejo e indústria.</p>
+<div class="flex gap-4">
+<a class="text-zinc-400 hover:text-teal-400 transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-zinc-400 hover:text-teal-400 transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-zinc-400 hover:text-teal-400 transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-['Inter'] text-xs tracking-widest uppercase font-bold text-zinc-900">Empresa</h4>
+<ul class="space-y-2">
+<li><a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Sobre Nós</a></li>
+<li><a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">FAQ</a></li>
+<li><a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Inter'] text-xs tracking-widest uppercase font-bold text-zinc-900">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Políticas de Privacidade</a></li>
+<li><a class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500 hover:text-teal-400 transition-colors" href="#">Termos de Uso</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-zinc-200 text-center">
+<span class="font-['Inter'] text-xs tracking-widest uppercase text-zinc-500">© 2024 BR Touch. Precision Engineered.</span>
+</div>
+</footer>
+</body></html>
