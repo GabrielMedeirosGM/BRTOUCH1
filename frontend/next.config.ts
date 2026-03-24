@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: '/BRTOUCH1',
+  assetPrefix: '/BRTOUCH1',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
